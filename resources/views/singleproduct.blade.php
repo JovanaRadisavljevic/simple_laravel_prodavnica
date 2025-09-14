@@ -1,4 +1,5 @@
-
+@extends('layout')
+@section('sadrzaj')
 <link rel="stylesheet" href="{{ asset('css/singleproizvod.css') }}">
 <section>
 <div class="proizvod">
@@ -32,3 +33,4 @@
         @endif
 </div>
 </section>
+@endsection

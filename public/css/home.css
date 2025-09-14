@@ -1,0 +1,54 @@
+.home-hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70vh;
+    padding: 40px 60px;
+    background: white;
+    gap: 40px;
+
+}
+.home-hero h1 {
+    font-size: 2.5rem;
+    color: #233263;
+    margin-bottom: 20px;
+}
+.home-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+.home-hero .btn{
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: #233263;
+    color: #e8f1f9;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.home-hero .btn:hover {
+    background: crimson;
+}
+.home-hero .desno {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #f9f9f9, #e8f1f9);
+    padding: 20px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.home-hero .desno ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.home-hero .desno li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+.home-hero .desno h2 {
+    margin-bottom: 15px;
+    color: #233263;
+}

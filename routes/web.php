@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    echo 'Welcome';
-});
-Route::get('/products', [ProductsController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/products', [ProductsController::class,'index'])->name('products');
 
 Route::get('/products/{type}/{id}', [ProductsController::class, 'show'])
     ->where(['type' => 'sator|ranac', 'id' => '[0-9]+'])

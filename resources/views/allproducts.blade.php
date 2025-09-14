@@ -1,3 +1,5 @@
+@extends('layout')
+@section('sadrzaj')
 <link rel="stylesheet" href="{{ asset('css/proizvodi.css') }}">
 <section>
     <h2>Katalog proizvoda</h2>
@@ -35,3 +37,4 @@
         @endforeach
     </div>
 </section>
+@endsection
