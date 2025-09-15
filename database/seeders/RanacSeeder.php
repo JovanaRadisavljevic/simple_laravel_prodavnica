@@ -11,12 +11,16 @@ class RanacSeeder extends Seeder
     {
         Ranac::updateOrCreate(
             ['model' => 'Trek 50'],
-            ['zapremina' => 50, 'tezina' => 1.45, 'price' => 10999]
+            ['zapremina' => 50, 'tezina' => 1.45, 
+            'price' => 10999,
+            'stock'=>20]
         );
 
         Ranac::updateOrCreate(
             ['model' => 'Alp 35'],
-            ['zapremina' => 35, 'tezina' => 1.20, 'price' => 8999]
+            ['zapremina' => 35, 'tezina' => 1.20, 
+            'price' => 8999,
+            'stock'=>50]
         );
     }
 }
