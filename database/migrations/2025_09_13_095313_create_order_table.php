@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('order', function (Blueprint $table) {
+       Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-            $table->dateTime('placed_at');
+            $table->dateTime('placed_at')->nullable(); // možeš i default now() ako hoćeš
             $table->string('status')->default('pending');
-            $table->decimal('total', 12, 2)->default(0);
+            $table->unsignedBigInteger('total')->default(0); // integer u centima/parama
+            $table->string('currency', 3)->default('RSD');
             $table->timestamps();
         });
+
     }
 
     /**
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('order');
+        Schema::dropIfExists('orders');
     }
 };

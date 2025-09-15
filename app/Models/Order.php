@@ -8,18 +8,29 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $table = 'order';
 
-    protected $fillable = ['user_id','placed_at','status','total'];
-    protected $casts = ['placed_at' => 'datetime', 'total' => 'decimal:2'];
+    protected $table = 'orders';
+
+    protected $fillable = [
+        'user_id',
+        'placed_at',
+        'status',
+        'total',
+        'currency',
+    ];
+
+    protected $casts = [
+        'placed_at' => 'datetime',
+        'total'     => 'integer', 
+    ];
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class);
     }
 
-    public function stavke()
+    public function items()
     {
-        return $this->hasMany(StavkaOrder::class, 'order_id');
+        return $this->hasMany(OrderItem::class);
     }
 }

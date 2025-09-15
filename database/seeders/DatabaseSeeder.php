@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SatorSeeder::class,
             RanacSeeder::class,
+            CartSeeder::class, 
             OrderSeeder::class,
         ]);
     }

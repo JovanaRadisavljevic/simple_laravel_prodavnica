@@ -9,7 +9,7 @@ class Sator extends Model
 {
     use HasFactory;
     protected $table = 'sator';
-    protected $fillable = ['model','sezona','brOsoba','tezina','price'];
+    protected $fillable = ['model','sezona','brOsoba','tezina','price','stock'];
     protected $casts = ['brOsoba'=>'integer','tezina'=>'decimal:2','price'=>'decimal:2'];
 
     public function stavke()

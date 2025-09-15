@@ -9,7 +9,7 @@ class Ranac extends Model
 {
     use HasFactory;
     protected $table='ranac';
-    protected $fillable = ['model','zapremina','tezina','price'];
+    protected $fillable = ['model','zapremina','tezina','price','stock'];
     protected $casts = ['zapremina'=>'integer','tezina'=>'decimal:2','price'=>'decimal:2'];
 
     public function stavke()
