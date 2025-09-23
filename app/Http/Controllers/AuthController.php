@@ -23,4 +23,12 @@ class AuthController extends Controller
     public function showLoginPage() {
         return view('loginpage');
     }
+    function logout(Request $request){
+        Auth::logout();
+        
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/'); 
+    }
 }
