@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
@@ -15,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+require __DIR__.'/auth.php';
+Route::get('/', [AuthController::class, 'showLoginPage'])->name('login.show');
+Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 
-Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/products', [ProductsController::class,'index'])->name('products');
 
 Route::get('/products/{type}/{id}', [ProductsController::class, 'show'])
@@ -25,4 +29,4 @@ Route::get('/products/{type}/{id}', [ProductsController::class, 'show'])
 
 Route::get('/cart',[CartController::class,'index'])->name('cart');
 Route::delete('/cart/{type}/{id}', [CartController::class, 'destroy'])->name('cart.destroy');
-require __DIR__.'/auth.php';
+

@@ -1,0 +1,52 @@
+.login{
+    max-width: 700px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #135c6e, #6dd5ed);
+    padding: 50px 70px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px
+}
+.polje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+input {
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 10px;
+}
+label{
+    color: aliceblue;
+    padding-bottom: 10px;
+}
+body {
+  height: 100vh;              
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    
+  align-items: center;        
+  margin: 0;                 
+}
+h2{
+    color: #115c6c;
+}
+.dugme{
+  text-align: center;
+  padding-top: 20px;
+}
+button{
+  padding: 10px;
+  border-radius: 15px;
+  color: aliceblue;
+  background-color: #15758a;
+  border: none;
+  font-size: 17px;
+}
+
+button:hover{
+  background-color: #6dd5ed;
+  color: black;
+}
