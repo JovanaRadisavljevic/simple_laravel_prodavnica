@@ -12,8 +12,12 @@ class Ranac extends Model
     protected $fillable = ['model','zapremina','tezina','price','stock'];
     protected $casts = ['zapremina'=>'integer','tezina'=>'decimal:2','price'=>'decimal:2'];
 
-    public function stavke()
+    public function orderItems()
     {
-        return $this->hasMany(StavkaOrder::class, 'ranac_id');
+        return $this->morphMany(OrderItem::class, 'product');
+    }
+    public function cartItems()
+    {
+        return $this->morphMany(CartItem::class, 'product');
     }
 }

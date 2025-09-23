@@ -12,8 +12,12 @@ class Sator extends Model
     protected $fillable = ['model','sezona','brOsoba','tezina','price','stock'];
     protected $casts = ['brOsoba'=>'integer','tezina'=>'decimal:2','price'=>'decimal:2'];
 
-    public function stavke()
+    public function orderItems()
     {
-        return $this->hasMany(StavkaOrder::class, 'sator_id');
+        return $this->morphMany(OrderItem::class, 'product');
+    }
+    public function cartItems()
+    {
+        return $this->morphMany(CartItem::class, 'product');
     }
 }

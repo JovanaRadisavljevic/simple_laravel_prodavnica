@@ -18,5 +18,8 @@ class CartItem extends Model
         'subtotal',       
     ];
     public function cart(){ return $this->belongsTo(Cart::class); }
-    public function products(){ return $this->morphTo('product'); }
+    public function product()
+    {
+        return $this->morphTo();
+    }
 }

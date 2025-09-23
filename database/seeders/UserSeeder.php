@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
             ['email' => 'admin@example.com'],
             [
                 'ime'      => 'Admin',
-                'preizme'  => 'Korisnik', 
+                'prezime'  => 'Korisnik', 
                 'role'     => 'admin',
                 'password' => Hash::make('lozinka123'),
             ]
@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
             ['email' => 'filip@example.com'],
             [
                 'ime'      => 'Filip',
-                'preizme'  => 'Ivić',    
+                'prezime'  => 'Ivić',    
                 'role'     => 'user',
                 'password' => Hash::make('lozinka123'),
             ]

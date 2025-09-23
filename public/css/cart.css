@@ -1,0 +1,50 @@
+.content{
+    max-width: 1200px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.content h2{
+    color:  rgb(35, 50, 99);
+}
+body {
+    padding-top: 50px;
+}
+.items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    text-align: center; 
+}
+.product{
+    padding: 10px;
+    min-width: 150px;
+    max-width: 200px;
+    background-color: rgb(35, 50, 99);
+    border-radius: 10px;
+    color: aliceblue;
+    text-align: center;
+}
+.product h3::after{
+    content: "";
+    display: block;            
+    width: 50%;               
+    margin: 10px auto 0;        
+    border-bottom: 2px solid aliceblue;
+}
+
+.btn{
+    background-color: rgb(236, 237, 241);
+    color: rgb(38, 41, 55);
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background-color: rgb(213, 29, 29);
+    color: aliceblue;
+}
